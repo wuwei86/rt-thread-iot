@@ -33,12 +33,12 @@ int main(void)
     {
         /* LED 灯亮 */
         rt_pin_write(LED_PIN, PIN_LOW);
-        LOG_D("led on, count: %d", count);
+        //LOG_D("led on, count: %d", count);
         rt_thread_mdelay(500);
 
         /* LED 灯灭 */
         rt_pin_write(LED_PIN, PIN_HIGH);
-        LOG_D("led off");
+        //LOG_D("led off");
         rt_thread_mdelay(500);
 
         count++;

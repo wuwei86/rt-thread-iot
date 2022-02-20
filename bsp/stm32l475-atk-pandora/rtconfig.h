@@ -94,6 +94,9 @@
 /* Socket abstraction layer */
 
 
+/* Network interface device */
+
+
 /* light weight TCP/IP stack */
 
 
@@ -133,27 +136,54 @@
 
 /* multimedia packages */
 
+/* LVGL: powerful and easy-to-use embedded GUI library */
+
+
+/* u8g2: a monochrome graphic library */
+
+
+/* PainterEngine: A cross-platform graphics application framework written in C language */
+
 
 /* tools packages */
 
 
 /* system packages */
 
+/* enhanced kernel services */
+
+
+/* POSIX extension functions */
+
+
+/* acceleration: Assembly language or algorithmic acceleration packages */
+
+
+/* CMSIS: ARM Cortex-M Microcontroller Software Interface Standard */
+
+
+/* Micrium: Micrium software products porting for RT-Thread */
+
 
 /* peripheral libraries and drivers */
 
 
-/* miscellaneous packages */
+/* AI packages */
 
+
+/* miscellaneous packages */
 
 /* samples: kernel and components samples */
 
 
-/* Privated Packages of RealThread */
+/* entertainment: terminal games and other interesting software packages */
 
+#define PKG_USING_MULTIBUTTON
+#define PKG_USING_MULTIBUTTON_LATEST_VERSION
 
-/* Network Utilities */
+/* MultiButton Options */
 
+#define MULTIBUTTON_USING_EXAMPLE_ASYNC
 
 /* Hardware Drivers Config */
 
