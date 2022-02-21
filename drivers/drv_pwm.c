@@ -45,10 +45,31 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
 
   /* USER CODE END TIM3_MspPostInit 1 */
   }
+  else if(htim->Instance==TIM1)
+  {
+       /* USER CODE BEGIN TIM3_MspPostInit 0 */
+
+  /* USER CODE END TIM3_MspPostInit 0 */
+    __HAL_RCC_GPIOE_CLK_ENABLE();
+    /**TIM3 GPIO Configuration    
+    PB0     ------> TIM3_CH3 
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_9;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Alternate = GPIO_AF2_TIM1;
+    HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+
+  /* USER CODE BEGIN TIM3_MspPostInit 1 */
+
+  /* USER CODE END TIM3_MspPostInit 1 */
+  }
 
 }
 
 #define BSP_USING_PWM3
+//#define BSP_USING_PWM1
 
 enum
 {
@@ -76,6 +97,13 @@ struct stm32_pwm
        .tim_handle.Instance     = TIM3,         \
        .name                    = "pwm3",       \
        .channel                 = 0             \
+    }
+
+#define PWM1_CONFIG                             \
+    {                                           \
+       .tim_handle.Instance     = TIM1,         \
+       .name                    = "pwm1",       \
+       .channel                 = 1             \
     }
 
 static struct stm32_pwm stm32_pwm_obj[] =
@@ -323,6 +351,9 @@ __exit:
 
 static void pwm_get_channel(void)
 {
+#ifdef BSP_USING_PWM1_CH1
+    stm32_pwm_obj[PWM1_INDEX].channel |= 1 << 0;
+#endif
 #ifdef BSP_USING_PWM2_CH1
     stm32_pwm_obj[PWM2_INDEX].channel |= 1 << 0;
 #endif
@@ -346,6 +377,10 @@ static int stm32_pwm_init(void)
     int result = RT_EOK;
 
     pwm_get_channel();
+
+#ifdef BSP_USING_PWM1
+    __HAL_RCC_TIM1_CLK_ENABLE();
+#endif
 
 #ifdef BSP_USING_PWM3
     __HAL_RCC_TIM3_CLK_ENABLE();

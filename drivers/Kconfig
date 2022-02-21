@@ -144,6 +144,11 @@ menu "Hardware Drivers Config"
             bool "Enable PWM3_CH3"
             select RT_USING_PWM
             default n
+			
+		config BSP_USING_PWM1_CH1
+            bool "Enable PWM1_CH1"
+            select RT_USING_PWM
+            default n
 
         config BSP_USING_TIM15
             bool "Enable HWTIMER_15"
