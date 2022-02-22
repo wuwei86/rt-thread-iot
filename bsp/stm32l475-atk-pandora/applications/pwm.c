@@ -50,7 +50,6 @@ static uint8_t button2_read_pin(void)
 static void button2_callback(void *btn)
 {
     uint32_t btn_event_val;
-    static rt_uint8_t beepCtrl = 0;
 
     btn_event_val = get_button_event((struct button *)btn);
 

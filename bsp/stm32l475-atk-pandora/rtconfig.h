@@ -78,8 +78,13 @@
 #define RT_USING_SERIAL
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
 #define RT_USING_PIN
 #define RT_USING_PWM
+#define RT_USING_SPI
+#define RT_USING_SENSOR
+#define RT_USING_SENSOR_CMD
 
 /* Using WiFi */
 
@@ -168,6 +173,14 @@
 
 /* peripheral libraries and drivers */
 
+#define PKG_USING_SENSORS_DRIVERS
+#define PKG_USING_AHT10
+#define AHT10_USING_SOFT_FILTER
+#define AHT10_AVERAGE_TIMES 10
+#define AHT10_SAMPLE_PERIOD 1000
+#define PKG_USING_AHT10_LATEST_VERSION
+#define PKG_USING_AP3216C
+#define PKG_USING_AP3216C_LATEST_VERSION
 
 /* AI packages */
 
@@ -190,6 +203,7 @@
 
 /* Onboard Peripheral Drivers */
 
+#define BSP_USING_LCD
 
 /* Offboard Peripheral Drivers */
 
@@ -198,6 +212,8 @@
 
 #define BSP_USING_UART1
 #define BSP_UART_USING_DMA_RX
+#define BSP_USING_I2C
+#define BSP_USING_SPI3
 #define BSP_USING_GPIO
 
 /* External Libraries */
