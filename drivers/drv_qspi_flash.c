@@ -44,7 +44,7 @@ int rt_hw_qspi_flash_with_sfud_init(void)
     rt_thread_mdelay(10);
 
     /* init w25q128 */
-    if (RT_NULL == rt_sfud_flash_probe("w25q128", "qspi10"))
+    if (RT_NULL == rt_sfud_flash_probe("NM25Q128EV", "qspi10"))
     {
         return -RT_ERROR;
     }

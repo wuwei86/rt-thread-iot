@@ -111,7 +111,7 @@ static rt_uint32_t qspixfer(struct rt_spi_device *device, struct rt_spi_message 
 
         qspi_send_cmd(0, 0, 0, QSPI_INSTRUCTION_NONE, QSPI_ADDRESS_NONE, QSPI_ADDRESS_24_BITS, QSPI_DATA_1_LINE, length);
 
-        if (HAL_QSPI_Transmit(&hqspi.QSPI_Handler, (rt_uint8_t *)sndb, 5000) == HAL_OK) //·¢ËÍÊý¾Ý
+        if (HAL_QSPI_Transmit(&hqspi.QSPI_Handler, (rt_uint8_t *)sndb, 5000) == HAL_OK) //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
 
             len = length;
