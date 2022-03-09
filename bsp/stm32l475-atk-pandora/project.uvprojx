@@ -10,7 +10,7 @@
       <TargetName>rt-thread_stm32l4xx</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER, STM32L475xx, RT_USING_ARM_LIBC</Define>
               <Undefine></Undefine>
-              <IncludePath>.;..\..\rt-thread\include;.;applications;packages\aht10-latest;packages\ap3216c-latest;packages\fal-latest\inc;ports\fal;packages\MultiButton-latest;..\..\rt-thread\libcpu\arm\common;..\..\rt-thread\libcpu\arm\cortex-m4;..\..\rt-thread\components\dfs\include;..\..\rt-thread\components\dfs\filesystems\devfs;..\..\rt-thread\components\dfs\filesystems\elmfat;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\spi;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\spi\sfud\inc;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\sensors;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\finsh;..\..\rt-thread\components\libc\compilers\armlibc;..\..\rt-thread\components\libc\compilers\common;..\..\libraries\CMSIS\Device\ST\STM32L4xx\Include;..\..\libraries\CMSIS\Include;..\..\libraries\STM32L4xx_HAL_Driver\inc;..\..\drivers</IncludePath>
+              <IncludePath>.;..\..\rt-thread\include;.;applications;packages\aht10-latest;packages\ap3216c-latest;packages\EasyFlash-latest\inc;packages\fal-latest\inc;ports\fal;packages\MultiButton-latest;..\..\rt-thread\libcpu\arm\common;..\..\rt-thread\libcpu\arm\cortex-m4;..\..\rt-thread\components\dfs\include;..\..\rt-thread\components\dfs\filesystems\devfs;..\..\rt-thread\components\dfs\filesystems\elmfat;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\spi;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\spi\sfud\inc;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\sensors;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\finsh;..\..\rt-thread\components\libc\compilers\armlibc;..\..\rt-thread\components\libc\compilers\common;..\..\libraries\CMSIS\Device\ST\STM32L4xx\Include;..\..\libraries\CMSIS\Include;..\..\libraries\STM32L4xx_HAL_Driver\inc;..\..\drivers</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -531,6 +531,56 @@
               <FileName>sensor_lsc_ap3216c.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\ap3216c-latest\sensor_lsc_ap3216c.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>EasyFlash</GroupName>
+          <Files>
+            <File>
+              <FileName>easyflash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\EasyFlash-latest\src\easyflash.c</FilePath>
+            </File>
+            <File>
+              <FileName>ef_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\EasyFlash-latest\src\ef_cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>ef_env.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\EasyFlash-latest\src\ef_env.c</FilePath>
+            </File>
+            <File>
+              <FileName>ef_env_legacy.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\EasyFlash-latest\src\ef_env_legacy.c</FilePath>
+            </File>
+            <File>
+              <FileName>ef_env_legacy_wl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\EasyFlash-latest\src\ef_env_legacy_wl.c</FilePath>
+            </File>
+            <File>
+              <FileName>ef_iap.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\EasyFlash-latest\src\ef_iap.c</FilePath>
+            </File>
+            <File>
+              <FileName>ef_log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\EasyFlash-latest\src\ef_log.c</FilePath>
+            </File>
+            <File>
+              <FileName>ef_utils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\EasyFlash-latest\src\ef_utils.c</FilePath>
+            </File>
+            <File>
+              <FileName>ef_fal_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ports\easyflash\ef_fal_port.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -786,7 +836,7 @@
                   <MiscControls> --c99</MiscControls>
                   <Define> </Define>
                   <Undefine> </Undefine>
-                  <IncludePath> </IncludePath>
+                  <IncludePath></IncludePath>
                 </VariousControls>
               </Cads>
               <Aads>

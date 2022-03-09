@@ -176,6 +176,16 @@
 
 /* tools packages */
 
+#define PKG_USING_EASYFLASH
+#define PKG_EASYFLASH_ENV
+#define PKG_EASYFLASH_IAP
+#define PKG_EASYFLASH_ERASE_GRAN 4096
+#define PKG_EASYFLASH_WRITE_GRAN_32BITS
+#define PKG_EASYFLASH_WRITE_GRAN 32
+#define PKG_EASYFLASH_START_ADDR 0
+#define PKG_EASYFLASH_DEBUG
+#define PKG_USING_EASYFLASH_LATEST_VERSION
+#define PKG_EASYFLASH_VER_NUM 0x99999
 
 /* system packages */
 
@@ -215,6 +225,8 @@
 
 
 /* miscellaneous packages */
+
+/* project laboratory */
 
 /* samples: kernel and components samples */
 
