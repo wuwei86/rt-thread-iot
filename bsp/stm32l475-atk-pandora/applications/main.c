@@ -54,6 +54,7 @@ int main(void)
     /* 设置 LED 引脚为输出模式 */
     rt_pin_mode(LED_PIN, PIN_MODE_OUTPUT);
 
+#if 0
     /* 初始化 fal 功能 */
     fal_init();
 
@@ -85,6 +86,7 @@ int main(void)
         LOG_E("Failed to initialize filesystem!");
         LOG_D("You should create a filesystem on the block device first!");
     }
+#endif
 
     while (count > 0)
     {
