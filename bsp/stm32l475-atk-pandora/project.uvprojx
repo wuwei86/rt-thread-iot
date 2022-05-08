@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER, STM32L475xx, RT_USING_ARM_LIBC</Define>
               <Undefine></Undefine>
-              <IncludePath>.;..\..\rt-thread\include;.;applications;packages\aht10-latest;packages\ap3216c-latest;packages\EasyFlash-latest\inc;ports\easyflash;packages\fal-latest\inc;ports\fal;packages\MultiButton-latest;packages\pahomqtt-v1.1.0\MQTTPacket\src;packages\pahomqtt-v1.1.0\MQTTClient-RT;packages\stm32_sdio-v1.0.2;ports\wifi;..\..\libraries\wifi;..\..\rt-thread\libcpu\arm\common;..\..\rt-thread\libcpu\arm\cortex-m4;..\..\rt-thread\components\dfs\include;..\..\rt-thread\components\dfs\filesystems\devfs;..\..\rt-thread\components\dfs\filesystems\elmfat;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\spi;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\spi\sfud\inc;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\wlan;..\..\rt-thread\components\drivers\sensors;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\finsh;..\..\rt-thread\components\libc\compilers\armlibc;..\..\rt-thread\components\libc\compilers\common;..\..\rt-thread\components\net\lwip-2.0.2\src;..\..\rt-thread\components\net\lwip-2.0.2\src\include;..\..\rt-thread\components\net\lwip-2.0.2\src\include\ipv4;..\..\rt-thread\components\net\lwip-2.0.2\src\arch\include;..\..\rt-thread\components\net\lwip-2.0.2\src\include\netif;..\..\rt-thread\components\net\netdev\include;..\..\rt-thread\components\net\sal_socket\include;..\..\rt-thread\components\net\sal_socket\include\socket;..\..\rt-thread\components\net\sal_socket\impl;..\..\rt-thread\components\net\sal_socket\include\dfs_net;..\..\rt-thread\components\net\sal_socket\include\dfs_net\sys_select;..\..\rt-thread\components\net\sal_socket\include\socket\sys_socket;..\..\libraries\CMSIS\Device\ST\STM32L4xx\Include;..\..\libraries\CMSIS\Include;..\..\libraries\STM32L4xx_HAL_Driver\inc;..\..\libraries\rt_ota\inc;..\..\drivers</IncludePath>
+              <IncludePath>.;..\..\rt-thread\include;.;applications;packages\aht10-latest;packages\ap3216c-latest;packages\EasyFlash-latest\inc;ports\easyflash;packages\fal-latest\inc;ports\fal;packages\MultiButton-latest;packages\pahomqtt-v1.1.0\MQTTPacket\src;packages\pahomqtt-v1.1.0\MQTTClient-RT;packages\stm32_sdio-v1.0.2;packages\webclient-v2.1.2\inc;ports\wifi;..\..\libraries\wifi;..\..\rt-thread\libcpu\arm\common;..\..\rt-thread\libcpu\arm\cortex-m4;..\..\rt-thread\components\dfs\include;..\..\rt-thread\components\dfs\filesystems\devfs;..\..\rt-thread\components\dfs\filesystems\elmfat;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\spi;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\spi\sfud\inc;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\drivers\wlan;..\..\rt-thread\components\drivers\sensors;..\..\rt-thread\components\drivers\include;..\..\rt-thread\components\finsh;..\..\rt-thread\components\libc\compilers\armlibc;..\..\rt-thread\components\libc\compilers\common;..\..\rt-thread\components\net\lwip-2.0.2\src;..\..\rt-thread\components\net\lwip-2.0.2\src\include;..\..\rt-thread\components\net\lwip-2.0.2\src\include\ipv4;..\..\rt-thread\components\net\lwip-2.0.2\src\arch\include;..\..\rt-thread\components\net\lwip-2.0.2\src\include\netif;..\..\rt-thread\components\net\netdev\include;..\..\rt-thread\components\net\sal_socket\include;..\..\rt-thread\components\net\sal_socket\include\socket;..\..\rt-thread\components\net\sal_socket\impl;..\..\rt-thread\components\net\sal_socket\include\dfs_net;..\..\rt-thread\components\net\sal_socket\include\dfs_net\sys_select;..\..\rt-thread\components\net\sal_socket\include\socket\sys_socket;..\..\libraries\CMSIS\Device\ST\STM32L4xx\Include;..\..\libraries\CMSIS\Include;..\..\libraries\STM32L4xx_HAL_Driver\inc;..\..\libraries\rt_ota\inc;..\..\drivers</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -478,6 +478,11 @@
               <FilePath>applications\app_ap3216.c</FilePath>
             </File>
             <File>
+              <FileName>app_mqtt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>applications\app_mqtt.c</FilePath>
+            </File>
+            <File>
               <FileName>app_wifi.c</FileName>
               <FileType>1</FileType>
               <FilePath>applications\app_wifi.c</FilePath>
@@ -508,9 +513,9 @@
               <FilePath>applications\rgbled.c</FilePath>
             </File>
             <File>
-              <FileName>app_mqtt.c</FileName>
+              <FileName>app_webclient.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\applications\app_mqtt.c</FilePath>
+              <FilePath>.\applications\app_webclient.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -785,6 +790,31 @@
               <FileName>stm32_sdio.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\stm32_sdio-v1.0.2\stm32_sdio.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>WebClient</GroupName>
+          <Files>
+            <File>
+              <FileName>webclient.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\webclient-v2.1.2\src\webclient.c</FilePath>
+            </File>
+            <File>
+              <FileName>webclient_file.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\webclient-v2.1.2\src\webclient_file.c</FilePath>
+            </File>
+            <File>
+              <FileName>webclient_get_sample.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\webclient-v2.1.2\samples\webclient_get_sample.c</FilePath>
+            </File>
+            <File>
+              <FileName>webclient_post_sample.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\webclient-v2.1.2\samples\webclient_post_sample.c</FilePath>
             </File>
           </Files>
         </Group>
