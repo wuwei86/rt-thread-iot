@@ -244,6 +244,14 @@
 
 /* IoT Cloud */
 
+#define PKG_USING_ONENET
+#define ONENET_USING_MQTT
+#define ONENET_INFO_DEVID "942105799"
+#define ONENET_INFO_AUTH "test"
+#define ONENET_INFO_APIKEY "i1nOIPXU0NtW3Pe=RzwcIp7xU2M="
+#define ONENET_INFO_PROID "513872"
+#define ONENET_MASTER_APIKEY "Le=4VjaKhCU=iNqCt2hnmelSzlc="
+#define PKG_USING_ONENET_LATEST_VERSION
 
 /* security packages */
 
@@ -252,6 +260,8 @@
 
 /* JSON: JavaScript Object Notation, a lightweight data-interchange format */
 
+#define PKG_USING_CJSON
+#define PKG_USING_CJSON_LATEST_VERSION
 
 /* XML: Extensible Markup Language */
 
